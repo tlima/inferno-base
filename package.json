@@ -1,0 +1,56 @@
+{
+  "name": "inferno-base",
+  "version": "0.0.1",
+  "description": "Inferno boilerplate for modern web projects.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "NODE_ENV=production webpack --config webpack.config.js --mode production",
+    "serve": "http-server ./build -g",
+    "clean": "rm -rf node_modules",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "inferno",
+    "boilerplate",
+    "webpack",
+    "jsx"
+  ],
+  "author": "Thiago L. Lima",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4",
+    "@babel/preset-react": "^7.0",
+    "babel-loader": "^8.0",
+    "babel-plugin-inferno": "^6.0",
+    "clean-webpack-plugin": "^3.0",
+    "compression-webpack-plugin": "^3.0",
+    "css-loader": "^2.1",
+    "eslint-config-airbnb": "^17.1",
+    "eslint-config-inferno-app": "^7.0",
+    "eslint-plugin-import": "^2.17",
+    "eslint-plugin-inferno": "^7.11",
+    "eslint-plugin-jsx-a11y": "^6.2",
+    "eslint": "^5.16",
+    "html-webpack-plugin": "^3.2",
+    "inferno-devtools": "^7.1",
+    "mini-css-extract-plugin": "^0.7",
+    "node-sass": "^4.12",
+    "optimize-css-assets-webpack-plugin": "^5.0",
+    "sass-loader": "^7.1",
+    "style-loader": "^0.23",
+    "terser-webpack-plugin": "^1.3",
+    "webpack-cli": "^3.3",
+    "webpack-dev-server": "^3.7",
+    "webpack": "^4.33"
+  },
+  "dependencies": {
+    "config": "^3.1",
+    "inferno": "^7.1",
+    "inferno-component": "^7.1",
+    "inferno-router": "^7.1"
+  }
+}
