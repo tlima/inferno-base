@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import styles from './style.scss';
 
 const Home = () => (

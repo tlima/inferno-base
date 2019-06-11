@@ -5,7 +5,7 @@ logs
 # Coverage directory used by tools like istanbul
 test/coverage
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
+# Bundled assets
 build
 
 # Dependency directory
