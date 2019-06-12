@@ -1,4 +1,4 @@
-import { INCREASE_COUNTER, DECREASE_COUNTER } from 'store/actions/types';
+import { INCREASE_COUNTER, ERASE_COUNTER } from 'store/actions/types';
 
 const counters = ['home', 'one', 'two'];
 
@@ -11,10 +11,18 @@ const initialState = {
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREASE_COUNTER:
-      if (counters.includes(action.target)) return Object.assign({}, state)[action.target]++;
+      if (counters.includes(action.target)) {
+        const newState = Object.assign({}, state);
+        newState[action.target]++;
+        return newState;
+      }
       return state;
-    case DECREASE_COUNTER:
-      if (counters.includes(action.target)) return Object.assign({}, state)[action.target]--;
+    case ERASE_COUNTER:
+      if (counters.includes(action.target)) {
+        const newState = Object.assign({}, state);
+        newState[action.target] = 0;
+        return newState;
+      }
       return state;
     default:
       return state;

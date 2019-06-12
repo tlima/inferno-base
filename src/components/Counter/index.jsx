@@ -1,19 +1,30 @@
-/* eslint-disable react/prefer-stateless-function */
-import { Component } from 'inferno-component';
+import { connect } from 'inferno-redux';
 
-class Counter extends Component {
-  render() {
-    const { store } = this.context;
-    const state = store.getState();
+import { eraseCountAction } from 'store/actions/counters';
 
-    return (
-      <div>
-        <div>Home counter: {state.counters.home}</div>
-        <div>One counter: {state.counters.one}</div>
-        <div>Two counter: {state.counters.two}</div>
-      </div>
-    );
-  }
-}
+const Counter = ({ counters, zeroCount }) => (
+  <div>
+    <div>
+      <span onClick={() => zeroCount('home')}>❎ </span>
+      Counter Home: {counters.home}
+    </div>
+    <div>
+      <span onClick={() => zeroCount('one')}>❎ </span>
+      Counter One: {counters.one}
+    </div>
+    <div>
+      <span onClick={() => zeroCount('two')}>❎ </span>
+      Counter Two: {counters.two}
+    </div>
+  </div>
+);
 
-export default Counter;
+const mapStateToProps = state => ({
+  counters: state.counters,
+});
+
+const mapDispatchToProps = dispatch => ({
+  zeroCount: target => dispatch(eraseCountAction(target)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Counter);

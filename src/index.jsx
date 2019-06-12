@@ -1,28 +1,26 @@
 import { render } from 'inferno';
 import { Provider } from 'inferno-redux';
-import { BrowserRouter, Route, Switch, Link } from 'inferno-router';
+import { BrowserRouter, Route, Switch } from 'inferno-router';
 
 import appStore from 'store';
 
 import Home from 'pages/Home';
 import One from 'pages/One';
 import Two from 'pages/Two';
-import Counter from 'components/Counter';
+import TopBar from 'components/TopBar';
+import Layout from 'components/Layout';
 
 const InfernoBase = () => (
   <Provider store={appStore}>
     <BrowserRouter>
-      <Counter />
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/one">One</Link></li>
-        <li><Link to="/two">Two</Link></li>
-      </ul>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/one" component={One} />
-        <Route path="/two" component={Two} />
-      </Switch>
+      <Layout>
+        <TopBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/one" component={One} />
+          <Route path="/two" component={Two} />
+        </Switch>
+      </Layout>
     </BrowserRouter>
   </Provider>
 );

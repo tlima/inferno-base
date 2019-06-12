@@ -66,7 +66,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'inferno-base',
-      meta: { description: 'Inferno boilerplate for modern web projects.' }
+      meta: { description: 'Inferno boilerplate for modern web projects.' },
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
