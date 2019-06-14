@@ -1,7 +1,7 @@
-const webpack = require('webpack');
-const sass = require('sass');
-const Fiber = require('fibers');
+/* eslint-disable global-require */
 const path = require('path'); // eslint-disable-line import/no-extraneous-dependencies
+const sass = require('sass');
+const webpack = require('webpack');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -43,7 +43,7 @@ module.exports = {
             options: {
               sourceMap: isDevelopment,
               implementation: sass,
-              fiber: process.arch === 'arm' ? null : Fiber, // fibers won't compile on arm
+              fiber: process.arch === 'arm' ? null : require('fibers'), // fibers won't compile on arm
             },
           },
         ],
