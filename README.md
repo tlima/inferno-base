@@ -43,6 +43,5 @@ If you wish to contribute, you are welcome to open issues and PRs on the github 
 ### Credits
 - Author: Thiago L. Lima
 
-License
-----
+### License
 MIT

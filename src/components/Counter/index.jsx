@@ -2,18 +2,20 @@ import { connect } from 'inferno-redux';
 
 import { eraseCountAction } from 'store/actions/counters';
 
+import styles from './style.scss';
+
 const Counter = ({ counters, zeroCount }) => (
   <div>
     <div>
-      <span onClick={() => zeroCount('home')}>❎ </span>
+      <span className={styles.removebutton} onClick={() => zeroCount('home')}>❎ </span>
       Counter Home: {counters.home}
     </div>
     <div>
-      <span onClick={() => zeroCount('one')}>❎ </span>
+      <span className={styles.removebutton} onClick={() => zeroCount('one')}>❎ </span>
       Counter One: {counters.one}
     </div>
     <div>
-      <span onClick={() => zeroCount('two')}>❎ </span>
+      <span className={styles.removebutton} onClick={() => zeroCount('two')}>❎ </span>
       Counter Two: {counters.two}
     </div>
   </div>

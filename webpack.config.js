@@ -1,5 +1,7 @@
 const webpack = require('webpack');
-const path = require('path');
+const sass = require('sass');
+const Fiber = require('fibers');
+const path = require('path'); // eslint-disable-line import/no-extraneous-dependencies
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -40,6 +42,8 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: isDevelopment,
+              implementation: sass,
+              fiber: Fiber,
             },
           },
         ],
