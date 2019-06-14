@@ -43,7 +43,7 @@ module.exports = {
             options: {
               sourceMap: isDevelopment,
               implementation: sass,
-              fiber: Fiber,
+              fiber: process.arch === 'arm' ? null : Fiber, // fibers won't compile on arm
             },
           },
         ],

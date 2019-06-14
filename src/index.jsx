@@ -25,7 +25,10 @@ const InfernoBase = () => (
   </Provider>
 );
 
+// document bootstrap
 const app = document.createElement('div');
+document.body.style.margin = 0;
+document.body.style.padding = 0;
 document.body.appendChild(app);
 
 render(<InfernoBase />, app);

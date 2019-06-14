@@ -1,12 +1,11 @@
 # inferno-base
-[WIP]
 This project is boilerplate code intended to be used as a base for modern lightweight web projects based on the Inferno library. It includes some *extremely* basic working structure as a starting point / showcase.
 
 ### Tech
 This project uses:
 - inferno / inferno-router / inferno-redux as a React ecosystem alternative
 - webpack for jsx parsing, minification, compression and bundling with cache busting via filename hashing
-- eslint for good coding practices and avoiding syntax problems
+- eslint based on airnbn rules to enforce good coding practices
 
 ### Installation
 Install the dependencies and devDependencies.
@@ -37,8 +36,6 @@ If you wish to contribute, you are welcome to open issues and PRs on the github 
 
 ### Todos
 - improve eslint config
-- improve base html
-- setup config defaults
 
 ### Credits
 - Author: Thiago L. Lima
