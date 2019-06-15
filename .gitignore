@@ -2,9 +2,6 @@
 logs
 *.log
 
-# Coverage directory used by tools like istanbul
-test/coverage
-
 # Bundled assets
 build
 

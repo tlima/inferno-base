@@ -1,5 +1,5 @@
 # inferno-base
-This project is boilerplate code intended to be used as a base for modern lightweight web projects based on the Inferno library. It includes some *extremely* basic working structure as a starting point / showcase.
+This project is boilerplate code intended to be used as a base for modern lightweight web projects based on the Inferno library. It includes an *extremely* basic working structure as a starting point / showcase.
 
 ### Tech
 This project uses:

@@ -1,9 +1,11 @@
 {
+  "extends": ["airbnb-base", "plugin:inferno/recommended"],
+  "plugins": ["inferno"],
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
-  "extends": ["airbnb-base", "plugin:inferno/recommended"],
   "globals": {
     "__webpack_hash__": "readonly"
   },
@@ -19,13 +21,12 @@
     "inferno": {
       "createClass": "createClass",
       "pragma": "Inferno"
-    },
-    "propWrapperFunctions": [ "forbidExtraProps" ]
+    }
   },
   "rules": {
     "object-curly-newline": 0,
     "react/jsx-one-expression-per-line": 0,
-    "no-plusplus": 0
-  },
-  "plugins": ["inferno"]
+    "no-plusplus": 0,
+    "jsx-quotes": 0
+  }
 }

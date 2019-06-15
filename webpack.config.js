@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-const path = require('path'); // eslint-disable-line import/no-extraneous-dependencies
+const path = require('path');
 const sass = require('sass');
 const webpack = require('webpack');
 
