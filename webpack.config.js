@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: [
+        use: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -48,13 +48,24 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[hash:base64:8].[ext]',
+            outputPath: 'img',
+          },
+        }],
+      }
     ],
   },
   resolve: {
     alias: {
+      assets: path.resolve(__dirname, 'src/assets'),
+      components: path.resolve(__dirname, 'src/components'),
       pages: path.resolve(__dirname, 'src/pages'),
       store: path.resolve(__dirname, 'src/store'),
-      components: path.resolve(__dirname, 'src/components'),
     },
     extensions: ['*', '.js', '.jsx', '.scss'],
   },
